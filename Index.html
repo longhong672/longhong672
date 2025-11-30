@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Videy Player</title>
+
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0e0e0e;
+            color: white;
+        }
+
+        .header {
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #4ea3ff;
+        }
+
+        .upload-btn {
+            padding: 10px 20px;
+            background: #1e90ff;
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .player-wrapper {
+            background: #1a1a1a;
+            padding: 12px;
+            border-radius: 16px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">videy<span>.mock</span></div>
+        <a href="#" class="upload-btn">Upload</a>
+    </div>
+
+    <div class="container">
+        <div class="player-wrapper">
+            <!-- Video Player -->
+            <video id="player" playsinline controls>
+                <!-- Ganti URL video ini -->
+                <source src="https://your-video-url-here.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 Your Videy Mock — Powered by GitHub Pages
+    </div>
+
+    <!-- Plyr Script -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
+
+</body>
+</html>
